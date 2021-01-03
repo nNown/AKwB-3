@@ -18,7 +18,6 @@ Vertex::Vertex(const std::string& header, const std::string& tag, const std::siz
     : _header(header), _tag(tag), _position(position) {}
 Vertex::~Vertex() {}
 
-// std::map<int, std::vector<int>>& Graph::Vertices() { return this->_vertices; }
 std::vector<Vertex> Graph::Vertices() { return this->_vertices; }
 
 void Graph::AddEdge(const int& i, const int& j) {
@@ -32,19 +31,50 @@ bool Graph::HasEdge(const int& i, const int& j) {
     return false;
 }
 
-// void Graph::AddVertex(const int& i) {
-//     this->_vertices.insert({i, std::vector<int>()});
-// }
+Graph Graph::FindClique() {
+    Graph clique = Graph();
+    
+    for(std::size_t i = 0; i < this->Vertices().size(); i++) {
+        for(std::size_t j = 0; j < this->Vertices().size(); j++) {
+
+        }
+    }
+}
 
 void Graph::AddVertex(const Vertex& vertex) {
     this->_vertices.push_back(vertex);
 }
 
-// bool Graph::HasVertex(const int& i) {
-//     return this->_vertices.find(i) != this->_vertices.end() ? true : false;
-// }
-
 Graph::Graph() 
     : _vertices(std::vector<Vertex>()) {}
+
+Graph::Graph(std::vector<Fasta>& sequences, const std::size_t& maxTagLength) {
+    for(auto& sequence : sequences) {
+        std::vector<std::pair<char, int>> patchedSequence = sequence.PatchedSequence();
+
+        std::size_t i = 0; 
+        do {
+            std::string tag = [patchedSequence, maxTagLength, i]() {
+                std::string tagContainer = "";
+                for(std::size_t j = i; j < i + maxTagLength; j++) {
+                    tagContainer += patchedSequence[j].first;
+                }
+                return tagContainer;
+            }();
+            std::cout << sequence.Sequence() << " " << i << " : " << tag << std::endl;
+            this->AddVertex(Vertex(std::get<0>(sequence.SequenceMetadata()), tag, patchedSequence[i].second));
+            i++;
+        } while(i <= patchedSequence.size() - maxTagLength);
+    }
+
+    for(std::size_t i = 0; i < this->Vertices().size(); i++) {
+        for(std::size_t j = 0; j < this->Vertices().size(); j++) {
+            if(this->Vertices()[i].Tag() == this->Vertices()[j].Tag() && this->Vertices()[i].Header() != this->Vertices()[j].Header()) {
+                this->AddEdge(i, j);
+                this->AddEdge(j, i);
+            }
+        }
+    }
+}
 
 Graph::~Graph() {}

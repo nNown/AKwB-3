@@ -2,6 +2,8 @@
 
 #include <map>
 #include <vector>
+#include <fasta.h>
+#include <iostream>
 
 class Vertex {
     private: 
@@ -26,19 +28,17 @@ class Vertex {
 
 class Graph {
     private: 
-        // std::map<int, std::vector<int>> _vertices;
         std::vector<Vertex> _vertices;
     public:
-        // std::map<int, std::vector<int>>& Vertices();
         std::vector<Vertex> Vertices();
 
         void AddEdge(const int& i, const int& j);
         bool HasEdge(const int& i, const int& j);
 
-        // void AddVertex(const int& i);
         void AddVertex(const Vertex& vertex);
-        // bool HasVertex(const int& i);
+        Graph FindClique();
 
         Graph();
+        Graph(std::vector<Fasta>& sequences, const std::size_t& maxTagLength);
         ~Graph();
 };
