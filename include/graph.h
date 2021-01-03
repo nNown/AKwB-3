@@ -4,6 +4,7 @@
 #include <vector>
 #include <fasta.h>
 #include <iostream>
+#include <functional>
 
 class Vertex {
     private: 
@@ -22,6 +23,7 @@ class Vertex {
         void Edges(const std::vector<std::size_t>& newEdges);
 
         Vertex();
+        Vertex(const Vertex& vertex);
         Vertex(const std::string& header, const std::string& tag, const std::size_t& position);
         ~Vertex();
 };
@@ -35,7 +37,7 @@ class Graph {
         void AddEdge(const std::size_t& i, const std::size_t& j);
         bool HasEdge(const std::size_t& i, const std::size_t& j);
 
-        void AddVertex(const std::size_t& position, const Vertex& vertex);
+        void AddVertex(const std::size_t& id, const Vertex& vertex);
         bool HasVertex(const std::size_t& i);
 
         Graph FindClique();

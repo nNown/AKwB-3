@@ -14,6 +14,8 @@ void Vertex::Edges(const std::vector<std::size_t>& newEdges) { this->_edges = ne
 
 Vertex::Vertex() 
     : _header(""), _tag(""), _position(0) {}
+Vertex::Vertex(const Vertex& vertex) 
+    : _header(vertex._header), _tag(vertex._tag), _position(vertex._position), _edges(vertex._edges) {}
 Vertex::Vertex(const std::string& header, const std::string& tag, const std::size_t& position) 
     : _header(header), _tag(tag), _position(position) {}
 Vertex::~Vertex() {}
@@ -31,8 +33,8 @@ bool Graph::HasEdge(const std::size_t& i, const std::size_t& j) {
     return false;
 }
 
-void Graph::AddVertex(const std::size_t& position, const Vertex& vertex) {
-    this->_vertices.insert({position, vertex});
+void Graph::AddVertex(const std::size_t& id, const Vertex& vertex) {
+    this->_vertices.insert({id, vertex});
 }
 
 bool Graph::HasVertex(const std::size_t& i) {
@@ -42,11 +44,27 @@ bool Graph::HasVertex(const std::size_t& i) {
 Graph Graph::FindClique() {
     Graph clique = Graph();
     
-    for(std::size_t i = 0; i < this->Vertices().size(); i++) {
-        for(std::size_t j = 0; j < this->Vertices().size(); j++) {
+    std::size_t maximumDegreeVertex = [this]() {
+        std::size_t position = 0;
 
+        for(std::size_t i = 0; i < this->Vertices().size(); i++) {
+            if(this->Vertices()[i].Edges().size() > this->Vertices()[position].Edges().size()) position = i;
         }
-    }
+
+        return position;
+    }();
+
+    std::function<void(std::size_t currentVertex)> addVertexToClique([this, &clique, &addVertexToClique](std::size_t currentVertex) {
+        if(clique.HasVertex(currentVertex)) return;
+        clique.AddVertex(currentVertex, Vertex(this->Vertices()[currentVertex]));
+
+        for(std::size_t i = 0; i < this->Vertices()[currentVertex].Edges().size(); i++) {
+            addVertexToClique(this->Vertices()[currentVertex].Edges()[i]);
+        }
+    }); 
+
+    addVertexToClique(maximumDegreeVertex);
+    return clique;
 }
 
 Graph::Graph() 
@@ -67,7 +85,9 @@ Graph::Graph(std::vector<Fasta>& sequences, const std::size_t& maxTagLength) {
                 }
                 return tagContainer;
             }();
+
             this->AddVertex(vertexID, Vertex(std::get<0>(sequence.SequenceMetadata()), tag, patchedSequence[i].second));
+            
             i++;
             vertexID++;
         } while(i <= patchedSequence.size() - maxTagLength);
