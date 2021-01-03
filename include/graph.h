@@ -10,7 +10,7 @@ class Vertex {
         std::string _header;
         std::string _tag;
         std::size_t _position;
-        std::vector<int> _edges;
+        std::vector<std::size_t> _edges;
     public:
         const std::string& Header();
         void Header(const std::string& newHeader);
@@ -18,8 +18,8 @@ class Vertex {
         void Tag(const std::string& newTag);
         const std::size_t& Position();
         void Position(const std::size_t& newPosition);
-        std::vector<int>& Edges();
-        void Edges(const std::vector<int>& newEdges);
+        std::vector<std::size_t>& Edges();
+        void Edges(const std::vector<std::size_t>& newEdges);
 
         Vertex();
         Vertex(const std::string& header, const std::string& tag, const std::size_t& position);
@@ -28,14 +28,16 @@ class Vertex {
 
 class Graph {
     private: 
-        std::vector<Vertex> _vertices;
+        std::map<std::size_t, Vertex> _vertices;
     public:
-        std::vector<Vertex> Vertices();
+        std::map<std::size_t, Vertex> Vertices();
 
-        void AddEdge(const int& i, const int& j);
-        bool HasEdge(const int& i, const int& j);
+        void AddEdge(const std::size_t& i, const std::size_t& j);
+        bool HasEdge(const std::size_t& i, const std::size_t& j);
 
-        void AddVertex(const Vertex& vertex);
+        void AddVertex(const std::size_t& position, const Vertex& vertex);
+        bool HasVertex(const std::size_t& i);
+
         Graph FindClique();
 
         Graph();

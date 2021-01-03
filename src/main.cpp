@@ -17,9 +17,10 @@ int main(void) {
     for(std::size_t i = 0; i < seqGraph.Vertices().size(); i++) {
         for(std::size_t j = 0; j < seqGraph.Vertices().size(); j++) {
             if(seqGraph.HasEdge(i, j)) {
-                std::cout << seqGraph.Vertices()[i].Position() << " : " << seqGraph.Vertices()[i].Tag() << " (" << seqGraph.Vertices()[i].Header() << ")" << " - " << seqGraph.Vertices()[j].Position() << " : " << seqGraph.Vertices()[j].Tag() << " (" << seqGraph.Vertices()[j].Header() << ")" << std::endl;
+                std::cout << i << ":" << seqGraph.Vertices()[i].Position() << " : " << seqGraph.Vertices()[i].Tag() << " (" << seqGraph.Vertices()[i].Header() << ")" << " - " << j << ":" << seqGraph.Vertices()[j].Position() << " : " << seqGraph.Vertices()[j].Tag() << " (" << seqGraph.Vertices()[j].Header() << ")" << std::endl;
             }
         }
+        // std::cout << i << ":" << seqGraph.Vertices()[i].Position() << " : " << seqGraph.Vertices()[i].Tag() << " (" << seqGraph.Vertices()[i].Header() << ")" << std::endl;
     }
 
     return 0;
