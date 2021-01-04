@@ -55,7 +55,13 @@ Graph Graph::FindClique() {
     }();
 
     std::function<void(std::size_t currentVertex)> addVertexToClique([this, &clique, &addVertexToClique](std::size_t currentVertex) {
-        if(clique.HasVertex(currentVertex)) return;
+        if(clique.HasVertex(currentVertex) || [this, &clique, currentVertex](){ 
+            for(auto& [ key, vertex ] : clique.Vertices()) {
+                if(vertex.Header() == this->Vertices()[currentVertex].Header()) return true;
+            }
+            return false; 
+        }()) return;
+
         clique.AddVertex(currentVertex, Vertex(this->Vertices()[currentVertex]));
 
         for(std::size_t i = 0; i < this->Vertices()[currentVertex].Edges().size(); i++) {

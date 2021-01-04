@@ -22,12 +22,12 @@ int main(void) {
 
     Graph clique = seqGraph.FindClique();
     for(auto& [ key, vertex ] : clique.Vertices()) {
-        for(auto& [ comparedKey, comparedVertex ] : clique.Vertices()) {
-            if(clique.HasEdge(key, comparedKey)) {
-                std::cout << key << ":" << vertex.Position() << " : " << vertex.Tag() << " (" << vertex.Header() << ")" << " - " << comparedKey << ":" << comparedVertex.Position() << " : " << comparedVertex.Tag() << " (" << comparedVertex.Header() << ")" << std::endl;
-            }
-        }
-        // std::cout << key << ":" << vertex.Position() << " " << vertex.Tag() << std::endl;
+        // for(auto& [ comparedKey, comparedVertex ] : clique.Vertices()) {
+        //     if(clique.HasEdge(key, comparedKey)) {
+        //         std::cout << key << ":" << vertex.Position() << " : " << vertex.Tag() << " (" << vertex.Header() << ")" << " - " << comparedKey << ":" << comparedVertex.Position() << " : " << comparedVertex.Tag() << " (" << comparedVertex.Header() << ")" << std::endl;
+        //     }
+        // }
+        std::cout << vertex.Header() << " : " << vertex.Position() << " - " << vertex.Tag() << std::endl;
     }
 
     return 0;
