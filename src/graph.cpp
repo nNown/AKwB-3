@@ -57,10 +57,12 @@ Graph Graph::FindClique() {
     std::function<void(std::size_t currentVertex)> addVertexToClique([this, &clique, &addVertexToClique](std::size_t currentVertex) {
         if(clique.HasVertex(currentVertex) || [this, &clique, currentVertex](){ 
             for(auto& [ key, vertex ] : clique.Vertices()) {
-                if(vertex.Header() == this->Vertices()[currentVertex].Header()) return true;
+                if(!this->HasEdge(key, currentVertex)) return true;
             }
             return false; 
-        }()) return;
+        }()) {
+            return;
+        }
 
         clique.AddVertex(currentVertex, Vertex(this->Vertices()[currentVertex]));
 
@@ -81,6 +83,7 @@ Graph::Graph(std::vector<Fasta>& sequences, const std::size_t& maxTagLength) {
 
     for(auto& sequence : sequences) {
         std::vector<std::pair<char, int>> patchedSequence = sequence.PatchedSequence();
+        if(patchedSequence.size() < maxTagLength) return;
 
         std::size_t i = 0; 
         do {
@@ -93,19 +96,16 @@ Graph::Graph(std::vector<Fasta>& sequences, const std::size_t& maxTagLength) {
             }();
 
             this->AddVertex(vertexID, Vertex(std::get<0>(sequence.SequenceMetadata()), tag, patchedSequence[i].second));
+            for(std::size_t i = 0; i < this->Vertices().size(); i++) {
+                if(this->Vertices()[i].Tag() == this->Vertices()[vertexID].Tag() && this->Vertices()[i].Header() != this->Vertices()[vertexID].Header()) {
+                    this->AddEdge(vertexID, i);
+                    this->AddEdge(i, vertexID);
+                }
+            }
             
             i++;
             vertexID++;
         } while(i <= patchedSequence.size() - maxTagLength);
-    }
-
-    for(std::size_t i = 0; i < this->Vertices().size(); i++) {
-        for(std::size_t j = 0; j < this->Vertices().size(); j++) {
-            if(this->Vertices()[i].Tag() == this->Vertices()[j].Tag() && this->Vertices()[i].Header() != this->Vertices()[j].Header()) {
-                this->AddEdge(i, j);
-                this->AddEdge(j, i);
-            }
-        }
     }
 }
 

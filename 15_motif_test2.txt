@@ -1,0 +1,361 @@
+Threshold: 20
+Tag length: 4
+>DOJHLOP02HHNZD : 24 - TTGT
+>DOJHLOP02G7AHA : 4 - TTGT
+>DOJHLOP02IPKKN : 108 - TTGT
+>DOJHLOP02IK9M4 : 17 - TTGT
+
+Tag length: 5
+>DOJHLOP02HHNZD : 20 - AGTCT
+>DOJHLOP02G7AHA : 44 - AGTCT
+>DOJHLOP02IK9M4 : 24 - AGTCT
+>DOJHLOP01DUOUE : 6 - AGTCT
+
+Tag length: 6
+>DOJHLOP02HHNZD : 1 - ACTCCA
+>DOJHLOP02IPKKN : 0 - ACTCCA
+>DOJHLOP02IK9M4 : 89 - ACTCCA
+
+Tag length: 7
+>DOJHLOP02HHNZD : 1 - ACTCCAG
+>DOJHLOP02IPKKN : 0 - ACTCCAG
+>DOJHLOP02IK9M4 : 89 - ACTCCAG
+
+Tag length: 8
+>DOJHLOP02HHNZD : 24 - TTGTCAGT
+>DOJHLOP02IK9M4 : 17 - TTGTCAGT
+
+Tag length: 9
+>DOJHLOP02HHNZD : 24 - TTGTCAGTC
+>DOJHLOP02IK9M4 : 17 - TTGTCAGTC
+
+============================================================
+Threshold: 21
+Tag length: 4
+>DOJHLOP02HHNZD : 13 - AGAT
+>DOJHLOP02G7AHA : 109 - AGAT
+>DOJHLOP02IPKKN : 5 - AGAT
+>DOJHLOP02IK9M4 : 32 - AGAT
+>DOJHLOP01DUOUE : 30 - AGAT
+
+Tag length: 5
+>DOJHLOP02HHNZD : 1 - ACTCC
+>DOJHLOP02IPKKN : 0 - ACTCC
+>DOJHLOP02IK9M4 : 89 - ACTCC
+
+Tag length: 6
+>DOJHLOP02HHNZD : 1 - ACTCCA
+>DOJHLOP02IPKKN : 0 - ACTCCA
+>DOJHLOP02IK9M4 : 89 - ACTCCA
+
+Tag length: 7
+>DOJHLOP02HHNZD : 1 - ACTCCAG
+>DOJHLOP02IPKKN : 0 - ACTCCAG
+>DOJHLOP02IK9M4 : 89 - ACTCCAG
+
+Tag length: 8
+>DOJHLOP02HHNZD : 0 - TACTCCAG
+
+Tag length: 9
+>DOJHLOP02HHNZD : 0 - TACTCCAGC
+
+============================================================
+Threshold: 22
+Tag length: 4
+>DOJHLOP02HHNZD : 87 - TTGT
+>DOJHLOP02G7AHA : 3 - TTGT
+>DOJHLOP02IPKKN : 107 - TTGT
+>DOJHLOP02IK9M4 : 10 - TTGT
+
+Tag length: 5
+>DOJHLOP02HHNZD : 87 - TTGTA
+>DOJHLOP02IPKKN : 107 - TTGTA
+>DOJHLOP02IK9M4 : 10 - TTGTA
+
+Tag length: 6
+>DOJHLOP02HHNZD : 1 - ACTCCA
+>DOJHLOP02IPKKN : 0 - ACTCCA
+>DOJHLOP02IK9M4 : 89 - ACTCCA
+
+Tag length: 7
+>DOJHLOP02HHNZD : 1 - ACTCCAG
+>DOJHLOP02IPKKN : 0 - ACTCCAG
+>DOJHLOP02IK9M4 : 89 - ACTCCAG
+
+Tag length: 8
+>DOJHLOP02HHNZD : 95 - TATTGTAA
+>DOJHLOP02IPKKN : 105 - TATTGTAA
+
+Tag length: 9
+>DOJHLOP02HHNZD : 0 - TACTCCAGC
+
+============================================================
+Threshold: 23
+Tag length: 4
+>DOJHLOP02HHNZD : 34 - CAAG
+>DOJHLOP02G7AHA : 68 - CAAG
+>DOJHLOP02IPKKN : 52 - CAAG
+>DOJHLOP01DUOUE : 0 - CAAG
+
+Tag length: 5
+>DOJHLOP02HHNZD : 92 - TATAT
+>DOJHLOP02G7AHA : 93 - TATAT
+>DOJHLOP01DUOUE : 95 - TATAT
+
+Tag length: 6
+>DOJHLOP02HHNZD : 1 - ACTCCG
+>DOJHLOP02IPKKN : 0 - ACTCCG
+
+Tag length: 7
+>DOJHLOP02HHNZD : 32 - GCAAGTA
+>DOJHLOP02G7AHA : 67 - GCAAGTA
+
+Tag length: 8
+>DOJHLOP02HHNZD : 0 - TACTCCGC
+
+Tag length: 9
+>DOJHLOP02HHNZD : 0 - TACTCCGCT
+
+============================================================
+Threshold: 24
+Tag length: 4
+>DOJHLOP02HHNZD : 34 - CAAG
+>DOJHLOP02G7AHA : 68 - CAAG
+>DOJHLOP02IPKKN : 52 - CAAG
+>DOJHLOP01DUOUE : 0 - CAAG
+
+Tag length: 5
+>DOJHLOP02HHNZD : 9 - TCAGA
+>DOJHLOP02IK9M4 : 102 - TCAGA
+>DOJHLOP01DUOUE : 27 - TCAGA
+
+Tag length: 6
+>DOJHLOP02HHNZD : 78 - ATCAGA
+>DOJHLOP02IK9M4 : 101 - ATCAGA
+>DOJHLOP01DUOUE : 26 - ATCAGA
+
+Tag length: 7
+>DOJHLOP02HHNZD : 78 - ATCAGAT
+>DOJHLOP01DUOUE : 26 - ATCAGAT
+
+Tag length: 8
+>DOJHLOP02HHNZD : 78 - ATCAGATG
+>DOJHLOP01DUOUE : 26 - ATCAGATG
+
+Tag length: 9
+>DOJHLOP02HHNZD : 0 - TCTCCGCTC
+
+============================================================
+Threshold: 25
+Tag length: 4
+>DOJHLOP02HHNZD : 9 - TCAG
+>DOJHLOP02IK9M4 : 22 - TCAG
+
+Tag length: 5
+>DOJHLOP02HHNZD : 43 - TAGGA
+>DOJHLOP02G7AHA : 125 - TAGGA
+>DOJHLOP01DUOUE : 44 - TAGGA
+
+Tag length: 6
+>DOJHLOP02G7AHA : 125 - TAGGAG
+>DOJHLOP01DUOUE : 44 - TAGGAG
+
+Tag length: 7
+>DOJHLOP02G7AHA : 125 - TAGGAGA
+>DOJHLOP01DUOUE : 44 - TAGGAGA
+
+Tag length: 8
+>DOJHLOP02HHNZD : 0 - TCCCGCTC
+
+Tag length: 9
+>DOJHLOP02HHNZD : 0 - TCCCGCTCA
+
+============================================================
+Threshold: 26
+Tag length: 4
+>DOJHLOP02HHNZD : 69 - TGAT
+>DOJHLOP02G7AHA : 108 - TGAT
+>DOJHLOP02IPKKN : 41 - TGAT
+>DOJHLOP01DUOUE : 19 - TGAT
+
+Tag length: 5
+>DOJHLOP02HHNZD : 10 - CGAGT
+>DOJHLOP02IPKKN : 57 - CGAGT
+>DOJHLOP01DUOUE : 0 - CGAGT
+
+Tag length: 6
+>DOJHLOP02HHNZD : 10 - CGAGTC
+>DOJHLOP02IPKKN : 57 - CGAGTC
+
+Tag length: 7
+>DOJHLOP02HHNZD : 0 - TCCGCTC
+
+Tag length: 8
+>DOJHLOP02HHNZD : 0 - TCCGCTCG
+
+Tag length: 9
+>DOJHLOP02HHNZD : 0 - TCCGCTCGA
+
+============================================================
+Threshold: 27
+Tag length: 4
+>DOJHLOP02HHNZD : 94 - ATAT
+>DOJHLOP02G7AHA : 56 - ATAT
+>DOJHLOP01DUOUE : 97 - ATAT
+
+Tag length: 5
+>DOJHLOP02HHNZD : 77 - CTCAG
+>DOJHLOP02G7AHA : 115 - CTCAG
+>DOJHLOP02IK9M4 : 91 - CTCAG
+
+Tag length: 6
+>DOJHLOP02HHNZD : 41 - GCGGAG
+>DOJHLOP02G7AHA : 14 - GCGGAG
+
+Tag length: 7
+>DOJHLOP02G7AHA : 100 - TTGTCTC
+>DOJHLOP02IK9M4 : 61 - TTGTCTC
+
+Tag length: 8
+>DOJHLOP02HHNZD : 0 - TCCGCTCG
+
+Tag length: 9
+>DOJHLOP02HHNZD : 0 - TCCGCTCGT
+
+============================================================
+Threshold: 28
+Tag length: 4
+>DOJHLOP02HHNZD : 9 - TCTT
+>DOJHLOP02G7AHA : 83 - TCTT
+>DOJHLOP02IPKKN : 18 - TCTT
+>DOJHLOP02IK9M4 : 76 - TCTT
+
+Tag length: 5
+>DOJHLOP02G7AHA : 100 - TTGTC
+>DOJHLOP02IPKKN : 20 - TTGTC
+>DOJHLOP02IK9M4 : 58 - TTGTC
+
+Tag length: 6
+>DOJHLOP02HHNZD : 62 - AGCACT
+>DOJHLOP02IK9M4 : 32 - AGCACT
+
+Tag length: 7
+>DOJHLOP02HHNZD : 62 - AGCACTG
+>DOJHLOP02IK9M4 : 32 - AGCACTG
+
+Tag length: 8
+>DOJHLOP02HHNZD : 0 - TCCGCTCT
+
+Tag length: 9
+>DOJHLOP02HHNZD : 0 - TCCGCTCTT
+
+============================================================
+Threshold: 29
+Tag length: 4
+>DOJHLOP02HHNZD : 9 - TCTT
+>DOJHLOP02IPKKN : 18 - TCTT
+>DOJHLOP02IK9M4 : 50 - TCTT
+
+Tag length: 5
+>DOJHLOP02HHNZD : 9 - TCTTC
+>DOJHLOP02IK9M4 : 64 - TCTTC
+
+Tag length: 6
+>DOJHLOP02HHNZD : 41 - GCGAGC
+>DOJHLOP02G7AHA : 14 - GCGAGC
+
+Tag length: 7
+>DOJHLOP02HHNZD : 0 - TCCGCTC
+
+Tag length: 8
+>DOJHLOP02HHNZD : 0 - TCCGCTCT
+
+Tag length: 9
+>DOJHLOP02HHNZD : 0 - TCCGCTCTT
+
+============================================================
+Threshold: 30
+Tag length: 4
+>DOJHLOP02HHNZD : 9 - TCTT
+>DOJHLOP02IK9M4 : 50 - TCTT
+
+Tag length: 5
+>DOJHLOP02HHNZD : 9 - TCTTC
+>DOJHLOP02IK9M4 : 64 - TCTTC
+
+Tag length: 6
+>DOJHLOP02HHNZD : 0 - TCGCTC
+
+Tag length: 7
+>DOJHLOP02HHNZD : 0 - TCGCTCT
+
+Tag length: 8
+>DOJHLOP02HHNZD : 0 - TCGCTCTT
+
+Tag length: 9
+>DOJHLOP02HHNZD : 0 - TCGCTCTTC
+
+============================================================
+Threshold: 31
+Tag length: 4
+>DOJHLOP02IPKKN : 43 - ATCC
+>DOJHLOP02IK9M4 : 16 - ATCC
+
+Tag length: 5
+>DOJHLOP02IPKKN : 43 - ATCCA
+>DOJHLOP02IK9M4 : 16 - ATCCA
+
+Tag length: 6
+>DOJHLOP02HHNZD : 0 - TGCTGG
+
+Tag length: 7
+>DOJHLOP02HHNZD : 0 - TGCTGGA
+
+Tag length: 8
+>DOJHLOP02HHNZD : 0 - TGCTGGAG
+
+Tag length: 9
+>DOJHLOP02HHNZD : 0 - TGCTGGAGC
+
+============================================================
+Threshold: 32
+Tag length: 4
+>DOJHLOP02HHNZD : 0 - TGTA
+>DOJHLOP01DUOUE : 27 - TGTA
+
+Tag length: 5
+>DOJHLOP02HHNZD : 0 - TGTAC
+
+Tag length: 6
+>DOJHLOP02HHNZD : 0 - TGTACT
+
+Tag length: 7
+>DOJHLOP02HHNZD : 0 - TGTACTA
+
+Tag length: 8
+>DOJHLOP02HHNZD : 0 - TGTACTAT
+
+Tag length: 9
+>DOJHLOP02HHNZD : 0 - TGTACTATA
+
+============================================================
+Threshold: 33
+Tag length: 4
+ : 0 - 
+
+Tag length: 5
+ : 0 - 
+
+Tag length: 6
+ : 0 - 
+
+Tag length: 7
+ : 0 - 
+
+Tag length: 8
+ : 0 - 
+
+Tag length: 9
+ : 0 - 
+
+============================================================
