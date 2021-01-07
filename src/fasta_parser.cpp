@@ -21,6 +21,9 @@ std::vector<Fasta> FastaParser::LoadFasta(const std::string& path) {
             sequence = "";
         } else sequence += line;
     }
+
+    sequence.erase(std::remove_if(sequence.begin(), sequence.end(), isspace), sequence.end());
+
     sequences.push_back(Fasta(header, sequence));
 
     fastaFile.close();

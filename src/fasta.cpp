@@ -46,7 +46,7 @@ const std::vector<std::pair<char, int>> Fasta::PatchedSequence() {
     std::vector<std::pair<char, int>> patchedSequence = std::vector<std::pair<char, int>>();
     
     for(std::size_t i = 0; i < this->_sequence.length(); i++) {
-        if(this->_sequence[i] == ' ') continue;
+        if(this->_sequence[i] == ' ' || this->_sequence[i] == '\n' || this->_sequence[i] == '\r' || this->_sequence[i] == '\t') continue;
 
         patchedSequence.push_back(std::make_pair(this->_sequence[i], i));
     }
