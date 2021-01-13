@@ -40,7 +40,7 @@ class Graph {
         void AddVertex(const std::size_t& id, const Vertex& vertex);
         bool HasVertex(const std::size_t& i);
 
-        Graph FindClique();
+        std::vector<Graph> FindClique();
 
         Graph();
         Graph(std::vector<Fasta>& sequences, const std::size_t& maxTagLength);

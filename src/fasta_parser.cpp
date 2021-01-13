@@ -19,10 +19,12 @@ std::vector<Fasta> FastaParser::LoadFasta(const std::string& path) {
             sequences.push_back(Fasta(header, sequence));
             header = line;
             sequence = "";
-        } else sequence += line;
+        } else {
+            line.erase(std::remove_if(line.begin(), line.end(), isspace), line.end());
+            sequence += line;
+        }
     }
 
-    sequence.erase(std::remove_if(sequence.begin(), sequence.end(), isspace), sequence.end());
 
     sequences.push_back(Fasta(header, sequence));
 

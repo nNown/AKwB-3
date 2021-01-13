@@ -41,38 +41,28 @@ bool Graph::HasVertex(const std::size_t& i) {
     return this->_vertices.find(i) != this->_vertices.end() ? true : false;
 }
 
-Graph Graph::FindClique() {
-    Graph clique = Graph();
+std::vector<Graph> Graph::FindClique() {
+    std::vector<Graph> cliques = std::vector<Graph>();
     
-    std::size_t maximumDegreeVertex = [this]() {
-        std::size_t position = 0;
+    for(auto& [ key, vertex ] : this->Vertices()) {
+        Graph clique = Graph();
+        clique.AddVertex(key, Vertex(vertex));
 
-        for(std::size_t i = 0; i < this->Vertices().size(); i++) {
-            if(this->Vertices()[i].Edges().size() > this->Vertices()[position].Edges().size()) position = i;
+        for(auto& edge : vertex.Edges()) {
+            if(clique.HasVertex(edge) || [this, &clique, edge]() {
+                for(auto& [ checkedKey, checkedVertex ] : clique.Vertices()) {
+                    if(!this->HasEdge(checkedKey, edge)) return true;
+                }
+                return false;
+            }()) continue;
+
+            clique.AddVertex(edge, Vertex(this->Vertices()[edge]));
         }
 
-        return position;
-    }();
+        if(clique.Vertices().size() > 4) cliques.push_back(clique);
+    }
 
-    std::function<void(std::size_t currentVertex)> addVertexToClique([this, &clique, &addVertexToClique](std::size_t currentVertex) {
-        if(clique.HasVertex(currentVertex) || [this, &clique, currentVertex](){ 
-            for(auto& [ key, vertex ] : clique.Vertices()) {
-                if(!this->HasEdge(key, currentVertex)) return true;
-            }
-            return false; 
-        }()) {
-            return;
-        }
-
-        clique.AddVertex(currentVertex, Vertex(this->Vertices()[currentVertex]));
-
-        for(std::size_t i = 0; i < this->Vertices()[currentVertex].Edges().size(); i++) {
-            addVertexToClique(this->Vertices()[currentVertex].Edges()[i]);
-        }
-    }); 
-
-    addVertexToClique(maximumDegreeVertex);
-    return clique;
+    return cliques;
 }
 
 Graph::Graph() 
